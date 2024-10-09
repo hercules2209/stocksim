@@ -5,7 +5,7 @@
   border-radius: var(--border-radius-medium);
   box-shadow: var(--box-shadow);
   color: var(--text);
-
+}
 
 .create-portfolio h2 {
   font-size: var(--font-size-large);
@@ -135,6 +135,4 @@ button[type="button"].remove-stock {
 
 button.remove-stock:hover {
   background-color: var(--primary);
-}
-
 }

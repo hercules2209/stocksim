@@ -1,4 +1,3 @@
-/* PortfolioDetail.css */
 .portfolio-detail {
   padding: var(--spacing-large);
   background-color: var(--surface);
@@ -6,15 +5,14 @@
   box-shadow: var(--box-shadow);
   color: var(--text);
 }
+
 .portfolio-detail h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: var(--spacing-medium);
   color: var(--text);
-  p{
-    font-size: var(--font-size-large);
-  }
+  font-size: var(--font-size-large);
 }
 
 .portfolio-detail p {
@@ -130,6 +128,7 @@ tbody tr:hover {
 .trend-icon.neutral {
   color: var(--primary);
 }
+
 .transaction-type {
   display: inline-block;
   padding: var(--spacing-small) var(--spacing-medium);
@@ -149,7 +148,6 @@ tbody tr:hover {
   color: var(--error);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .portfolio-detail {
     padding: var(--spacing-medium);
@@ -164,4 +162,3 @@ tbody tr:hover {
     padding: var(--spacing-small);
   }
 }
-

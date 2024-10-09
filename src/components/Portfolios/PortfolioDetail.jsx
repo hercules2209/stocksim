@@ -142,7 +142,7 @@ const PortfolioDetail = () => {
 
   return (
     <div className="portfolio-detail">
-      <h2><p>{portfolio.name}</p>
+      <h2 className='portfolio-name'><p>{portfolio.name}</p>
       <button className='edit-button' onClick={() => navigate(`/edit-portfolio/${portfolio._id}`)}>
       <MdOutlineEdit />
       </button>

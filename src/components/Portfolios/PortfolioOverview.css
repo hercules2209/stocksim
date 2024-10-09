@@ -5,9 +5,9 @@
   border-radius: var(--border-radius-medium);
   box-shadow: var(--box-shadow);
   color: var(--text);
+}
 
-
-.portfolio-overview h2 {
+.portfolio-overview  h2 {
   font-size: var(--font-size-large);
   margin-bottom: var(--spacing-medium);
   color: var(--text);
@@ -137,7 +137,4 @@ td button:hover {
 .delete-icon {
   font-size: 1.5em; /* Size of the delete icon */
   transition: color var(--transition-fast);
-}
-
-
 }

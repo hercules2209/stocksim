@@ -34,13 +34,6 @@ export const fetchPortfolioById = createAsyncThunk(
   }
 );
 
-export const updateStockInPortfolio = createAsyncThunk(
-  'portfolios/updateStock',
-  async ({ portfolioId, stockId, quantity }) => {
-    const response = await portfolioApi.updateStockQuantity(portfolioId, stockId, quantity);
-    return response;
-  }
-);
 
 export const addStockToPortfolio = createAsyncThunk(
   'portfolios/addStock',
@@ -87,9 +80,6 @@ const portfolioSlice = createSlice({
         state.items = state.items.filter(portfolio => portfolio._id !== action.payload);
       })
       .addCase(fetchPortfolioById.fulfilled, (state, action) => {
-        state.currentPortfolio = action.payload;
-      })
-      .addCase(updateStockInPortfolio.fulfilled, (state, action) => {
         state.currentPortfolio = action.payload;
       })
       .addCase(addStockToPortfolio.fulfilled, (state, action) => {
