@@ -1,0 +1,133 @@
+/* EditPortfolio.css */
+.edit-portfolio {
+    padding: var(--spacing-large);
+    background-color: var(--surface);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+    color: var(--text);
+  }
+  
+  .edit-portfolio h2 {
+    font-size: var(--font-size-large);
+    margin-bottom: var(--spacing-medium);
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    scale: 2;
+    font-size: var(--font-size-large);
+    color: var(--primary);
+    margin-right: var(--spacing-medium);
+    transition: color var(--transition-fast);
+  }
+  
+  .back-button:hover {
+    color: var(--secondary);
+  }
+  
+  .search-bar {
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .temp-stock {
+    background-color: var(--background);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius-medium);
+    margin-bottom: var(--spacing-large);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .temp-stock h3 {
+    margin: 0;
+    font-size: var(--font-size-medium);
+  }
+  
+  .temp-stock input {
+    width: 80px;
+    padding: var(--spacing-small);
+    border: 1px solid var(--text-secondary);
+    border-radius: var(--border-radius-small);
+  }
+  
+  .add-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-large);
+    color: var(--success);
+    transition: color var(--transition-fast);
+  }
+  
+  .add-button:hover {
+    color: var(--primary);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-large);
+  }
+  
+  thead th {
+    background-color: var(--background);
+    padding: var(--spacing-small);
+    text-align: left;
+    font-weight: bold;
+    color: var(--text-secondary);
+  }
+  
+  tbody td {
+    padding: var(--spacing-small);
+    border-bottom: 1px solid var(--text-secondary);
+  }
+  
+  tbody tr:hover {
+    background-color: var(--background);
+  }
+  
+  .transaction-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--spacing-large);
+  }
+  
+  .transaction-type {
+    display: flex;
+    gap: var(--spacing-medium);
+  }
+  
+  .transaction-type label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .transaction-type input[type="radio"] {
+    margin-right: var(--spacing-small);
+  }
+  
+  .transaction-button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    background-color: var(--primary);
+    color: var(--surface);
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  
+  .transaction-button:hover {
+    background-color: var(--secondary);
+  }
+  
+  .error-message {
+    color: var(--error);
+    margin-top: var(--spacing-medium);
+  }

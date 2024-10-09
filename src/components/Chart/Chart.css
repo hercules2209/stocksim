@@ -1,0 +1,15 @@
+/* Chart.css */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: var(--surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+}

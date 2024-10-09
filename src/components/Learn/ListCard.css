@@ -1,0 +1,36 @@
+.list-card {
+  background-color: var(--surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing-medium);
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.list-card:hover {
+  transform: translateY(-4px);
+}
+
+.list-card .article-title {
+  font-size: var(--font-size-large);
+  color: var(--primary);
+  margin-bottom: var(--spacing-small);
+}
+
+.list-card .article-summary {
+  font-size: var(--font-size-medium);
+  color: var(--text);
+  margin-bottom: var(--spacing-medium);
+}
+
+.list-card .article-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+}
+
+.list-card .read-more {
+  color: var(--primary);
+}

@@ -1,0 +1,28 @@
+@import 'styles/variables.css';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  color: var(--text);
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color var(--transition-medium), color var(--transition-medium);
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 100px; 
+  transition: margin-left var(--transition-medium);
+  padding: var(--spacing-large);
+}

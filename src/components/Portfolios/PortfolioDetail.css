@@ -1,0 +1,167 @@
+/* PortfolioDetail.css */
+.portfolio-detail {
+  padding: var(--spacing-large);
+  background-color: var(--surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  color: var(--text);
+}
+.portfolio-detail h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-medium);
+  color: var(--text);
+  p{
+    font-size: var(--font-size-large);
+  }
+}
+
+.portfolio-detail p {
+  font-size: var(--font-size-medium);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-small);
+}
+
+/* Edit Button */
+.edit-button {
+  font-size: var(--font-size-large);
+  color: var(--primary);
+  background: none;
+  scale: 2;
+  border: none;
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  box-shadow: var(--box-shadow);
+}
+
+.edit-button:hover {
+  background-color: var(--surface);
+  color: var(--secondary);
+}
+
+/* Tab Container */
+.tab-container {
+  display: flex;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.tab {
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-medium);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  background-color: var(--background);
+  color: var(--text);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.tab.active {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+.tab:hover {
+  background-color: var(--secondary);
+  color: var(--surface);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-large);
+}
+
+thead th {
+  background-color: var(--background);
+  padding: var(--spacing-small);
+  text-align: left;
+  font-size: var(--font-size-medium);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--primary);
+}
+
+tbody td {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  color: var(--text);
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+tbody tr:hover {
+  background-color: var(--background);
+}
+
+.stock-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-small);
+  object-fit: cover;
+}
+
+.stock-logo-placeholder {
+  width: 40px;
+  height: 40px;
+  background-color: var(--text-secondary);
+  display: flex;
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  color: var(--surface);
+}
+
+/* Trend Icons */
+.trend-icon {
+  font-size: 1.5em;
+  transition: color var(--transition-fast);
+}
+
+.trend-icon.up {
+  color: var(--success);
+}
+
+.trend-icon.down {
+  color: var(--error);
+}
+
+.trend-icon.neutral {
+  color: var(--primary);
+}
+.transaction-type {
+  display: inline-block;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: var(--border-radius-small);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--font-size-small);
+}
+
+.transaction-type.buy {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: var(--success);
+}
+
+.transaction-type.sell {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: var(--error);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-detail {
+    padding: var(--spacing-medium);
+  }
+
+  table {
+    font-size: var(--font-size-small);
+  }
+
+  thead th,
+  tbody td {
+    padding: var(--spacing-small);
+  }
+}
+

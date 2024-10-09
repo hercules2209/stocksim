@@ -1,0 +1,138 @@
+.sidebar {
+  width: 100px;
+  height: 100vh;
+  background-color: var(--surface);
+  color: var(--text);
+  transition: width var(--transition-medium), background-color var(--transition-medium), color var(--transition-medium);
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 99999;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.expanded {
+  width: 200px;
+}
+
+.sidebar-header {
+  padding: var(--spacing-medium);
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-small);
+  cursor: pointer;
+  font-size: var(--font-size-large);
+  color: var(--text);
+  transition: color var(--transition-fast);
+}
+
+.toggle-btn:hover {
+  color: var(--primary);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--spacing-large);
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-medium);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  border-radius: 0 25px 25px 0;
+  margin: 5px 0;
+}
+
+.nav-item:hover, .nav-item.active {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+.icon {
+  font-size: 24px;
+  min-width: 24px;
+  margin-right: var(--spacing-medium);
+}
+
+.label {
+  display: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar.expanded .label {
+  display: inline;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-medium);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+  margin-top: auto;
+  border-top: 1px solid var(--text-secondary);
+}
+
+.theme-toggle:hover {
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+.theme-toggle .label {
+  margin-left: var(--spacing-small);
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 var(--spacing-medium);
+  }
+
+  .sidebar.expanded {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .nav-menu {
+    flex-direction: row;
+    margin-top: 0;
+    overflow-x: auto;
+  }
+
+  .nav-item {
+    border-radius: 25px;
+    margin: 0 5px;
+  }
+
+  .theme-toggle {
+    margin-top: 0;
+    border-top: none;
+  }
+
+  .label {
+    display: none;
+  }
+
+  .sidebar.expanded .label {
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+/* src/components/home.css */
+.home-content {
+    max-width: auto;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .home-content h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+    color: var(--text);
+    font-size: var(--font-size-xlarge);
+  }
+  
+  #logo {
+    display: block;
+    margin: 0 auto;
+    max-width: auto;
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .market-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-large);
+    gap: var(--spacing-medium);
+  }
+  
+  .market-status, .market-holidays, .market-news {
+    background-color: var(--surface);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-large);
+  }
+  
+  .market-status, .market-holidays {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .home-content h2 {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+    color: var(--text);
+    font-size: var(--font-size-medium);
+  }
+  
+  .status-details p, .holiday-list li {
+    margin-bottom: var(--spacing-small);
+    color: var(--text-secondary);
+    font-size: var(--font-size-small);
+  }
+  
+  .holiday-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-medium);
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: var(--font-size-large);
+    color: var(--text);
+    margin-top: var(--spacing-large);
+    padding: var(--spacing-large);
+    background-color: var(--surface);
+    border-radius: var(--border-radius-medium);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .error {
+    color: var(--error);
+  }
+  
+  @media (max-width: 768px) {
+    .market-info-container {
+      flex-direction: column;
+    }
+  
+    .market-status, .market-holidays {
+      margin-bottom: var(--spacing-medium);
+    }
+  
+    .news-grid {
+      grid-template-columns: 1fr;
+    }
+  }

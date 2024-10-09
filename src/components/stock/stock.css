@@ -1,0 +1,169 @@
+/* stock.css */
+.stock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: var(--spacing-large);
+  background-color: var(--background);
+  transition: all var(--transition-medium);
+}
+
+.search-container {
+  width: 100%;
+  margin-bottom: var(--spacing-medium);
+}
+
+.stock-header {
+  width: 100%;
+  text-align: left;
+  margin-bottom: var(--spacing-large);
+  color: var(--text);
+  font-size: var(--font-size-large);
+}
+
+.time-range-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-small);
+  margin-top: var(--spacing-medium);
+}
+
+.time-range-button {
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-small);
+  border: none;
+  background-color: var(--surface);
+  color: var(--text);
+  border-radius: var(--border-radius-large);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.time-range-button:hover,
+.time-range-button.active {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+/* Company profile section */
+.company-profile {
+  width: 100%;
+  border-radius: var(--border-radius-medium);
+  padding: var(--spacing-large);
+  margin-top: var(--spacing-large);
+  box-shadow: var(--box-shadow);
+  background-color: var(--surface);
+}
+
+.company-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-medium);
+  align-items: center;
+}
+
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-small);
+  grid-column: 1 / span 2;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.company-name {
+  font-size: var(--font-size-large);
+  color: var(--text);
+}
+
+.company-ticker {
+  font-size: var(--font-size-medium);
+  color: var(--text-secondary);
+  margin-top: var(--spacing-small);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-label {
+  font-size: var(--font-size-small);
+  color: var(--text-secondary);
+}
+
+.info-value {
+  font-size: var(--font-size-medium);
+  color: var(--text);
+}
+
+.company-website a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.company-website a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+.buy-sell-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.buy-button,
+.sell-button {
+  padding: var(--spacing-small) var(--spacing-medium);
+  font-size: var(--font-size-medium);
+  border: none;
+  border-radius: var(--border-radius-small);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.buy-button {
+  background-color: var(--success);
+  color: var(--surface);
+}
+
+.sell-button {
+  background-color: var(--error);
+  color: var(--surface);
+}
+
+.buy-button:hover {
+  background-color: var(--primary);
+}
+
+.sell-button:hover {
+  background-color: var(--secondary);
+}
+
+.indicator-toggles {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.indicator-toggles label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.indicator-toggles input[type='checkbox'] {
+  margin-right: var(--spacing-small);
+}

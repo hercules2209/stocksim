@@ -1,0 +1,140 @@
+/* CreatePortfolio.css */
+.create-portfolio {
+  padding: var(--spacing-large);
+  background-color: var(--surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  color: var(--text);
+
+
+.create-portfolio h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-medium);
+  color: var(--text);
+}
+
+.create-portfolio .error {
+  color: var(--error);
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius-small);
+  margin-bottom: var(--spacing-medium);
+}
+
+form div {
+  margin-bottom: var(--spacing-medium);
+}
+
+label {
+  display: block;
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--spacing-small);
+  color: var(--text-secondary);
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 40%;
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius-small);
+  background-color: var(--background);
+  color: var(--text);
+  transition: border-color var(--transition-fast);
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+h3 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-small);
+  color: var(--text);
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-medium);
+}
+
+thead th {
+  background-color: var(--background);
+  padding: var(--spacing-small);
+  text-align: left;
+  font-size: var(--font-size-medium);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--primary);
+  transition: background-color var(--transition-fast);
+}
+
+tbody td {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  color: var(--text);
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+tbody tr:hover {
+  background-color: var(--background);
+}
+
+/* Image Style */
+td img {
+  border-radius: var(--border-radius-small);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  gap: var(--spacing-medium);
+  margin-top: var(--spacing-medium);
+}
+
+.button-group button {
+  padding: var(--spacing-small) var(--spacing-large);
+  font-size: var(--font-size-medium);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+/* Create Button */
+button[type="submit"] {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+button[type="submit"]:hover {
+  background-color: var(--secondary);
+}
+
+/* Cancel Button */
+button[type="button"] {
+  background-color: var(--error);
+  color: var(--surface);
+}
+
+button[type="button"]:hover {
+  background-color: var(--secondary);
+}
+
+/* Remove Stock Button */
+button[type="button"].remove-stock {
+  background-color: var(--error);
+  color: var(--surface);
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius-small);
+}
+
+button.remove-stock:hover {
+  background-color: var(--primary);
+}
+
+}

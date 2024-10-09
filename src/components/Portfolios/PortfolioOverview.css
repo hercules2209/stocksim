@@ -1,0 +1,143 @@
+/* PortfolioOverview.css */
+.portfolio-overview {
+  padding: var(--spacing-large);
+  background-color: var(--surface);
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--box-shadow);
+  color: var(--text);
+
+
+.portfolio-overview h2 {
+  font-size: var(--font-size-large);
+  margin-bottom: var(--spacing-medium);
+  color: var(--text);
+}
+
+.create-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-small) var(--spacing-medium);
+  background-color: var(--primary);
+  color: var(--surface);
+  border-radius: var(--border-radius-small);
+  text-decoration: none;
+  font-size: var(--font-size-medium);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.create-portfolio-btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.create-portfolio-btn i {
+  margin-right: var(--spacing-small);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: var(--spacing-large);
+}
+
+thead th {
+  background-color: var(--background);
+  padding: var(--spacing-small);
+  text-align: left;
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--primary);
+  transition: background-color var(--transition-fast);
+}
+
+thead th:hover {
+  background-color: var(--surface);
+}
+
+tbody td {
+  padding: var(--spacing-small);
+  font-size: var(--font-size-medium);
+  color: var(--text);
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+tbody tr:hover {
+  background-color: var(--background);
+}
+
+td a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: color var(--transition-fast);
+}
+
+td a:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+td button {
+  background: none;
+  border: none;
+  color: var(--error);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+td button:hover {
+  color: var(--primary);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-medium);
+}
+
+.pagination button {
+  background-color: var(--background);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius-small);
+  padding: var(--spacing-small) var(--spacing-medium);
+  margin-right: var(--spacing-small);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.pagination button:hover {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+/* PortfolioOverview.css */
+
+/* Delete Button */
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* No background, relies on theme */
+  border: none;
+  color: var(--error); /* Red color for delete action */
+  cursor: pointer;
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius-small);
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+/* Hover Effect for Delete Button */
+.delete-button:hover {
+  background-color: var(--primary); /* Changes background to primary on hover */
+  color: var(--surface); /* Changes icon color to white on hover */
+  transform: translateY(-2px); /* Slight lift for hover effect */
+}
+
+/* Delete Icon */
+.delete-icon {
+  font-size: 1.5em; /* Size of the delete icon */
+  transition: color var(--transition-fast);
+}
+
+
+}
