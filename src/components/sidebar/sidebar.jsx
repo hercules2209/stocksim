@@ -63,7 +63,7 @@ export default function Sidebar() {
     <NavLink to="/dashboard" className={`nav-item user-section ${expanded ? 'expanded' : ''}`} onClick={handleNavClick}>
       <span className="icon">
         {user?.photoURL ? (
-          <img src={user.photoURL} alt="Profile" className="profile-pic" />
+          <img src={user.photoURL} alt="" className="profile-pic" />
         ) : (
           <RxPerson className="icon" />
         )}

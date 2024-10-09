@@ -55,7 +55,7 @@ function Dashboard() {
     <div className="dashboard">
       <h2>Welcome, {user?.displayName || 'User'}!</h2>
       <div className="profile-section">
-        <img src={user?.photoURL || defaulAvatar} alt="Profile" className="profile-picture" />
+        <img src={user?.photoURL || defaulAvatar} alt="" className="profile-picture" />
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
         <form onSubmit={handleUpdateProfile} className="profile-form">
