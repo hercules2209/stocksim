@@ -3,7 +3,7 @@ import { useUser, useStorage, useAuth } from 'reactfire';
 import { updateProfile, signOut } from 'firebase/auth';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router-dom';
-import defaulAvatar from '/home/harsh/Documents/Stocksim/stocksim/frontend/src/assets/images/default-avatar.png';
+import defaulAvatar from '../../assets/images/default-avatar.png';
 import './Dashboard.css';
 
 function Dashboard() {
