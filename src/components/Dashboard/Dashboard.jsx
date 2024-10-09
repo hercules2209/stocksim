@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { useUser, useFirestore, useStorage, useAuth } from 'reactfire';
+import { useUser, useStorage, useAuth } from 'reactfire';
 import { updateProfile, signOut } from 'firebase/auth';
-import { doc, updateDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { useNavigate } from 'react-router-dom';
+import defaulAvatar from '/home/harsh/Documents/Stocksim/stocksim/frontend/src/assets/images/default-avatar.png';
 import './Dashboard.css';
 
 function Dashboard() {
   const { data: user } = useUser();
-  const firestore = useFirestore();
   const storage = useStorage();
   const auth = useAuth();
   const navigate = useNavigate();
@@ -23,17 +22,22 @@ function Dashboard() {
     setError(null);
     setSuccess(null);
     try {
-      await updateProfile(user, { displayName });
-      await updateDoc(doc(firestore, 'users', user.uid), { username: displayName });
+      let photoURL = user.photoURL;
 
       if (file) {
         const storageRef = ref(storage, `profilePictures/${user.uid}`);
         await uploadBytes(storageRef, file);
-        const downloadURL = await getDownloadURL(storageRef);
-        await updateProfile(user, { photoURL: downloadURL });
+        photoURL = await getDownloadURL(storageRef);
       }
+
+      await updateProfile(user, { 
+        displayName: displayName,
+        photoURL: photoURL
+      });
+
       setSuccess('Profile updated successfully!');
     } catch (error) {
+      console.error('Error updating profile:', error);
       setError(error.message);
     }
   };
@@ -51,7 +55,7 @@ function Dashboard() {
     <div className="dashboard">
       <h2>Welcome, {user?.displayName || 'User'}!</h2>
       <div className="profile-section">
-        <img src={user?.photoURL || 'default-avatar.png'} alt="Profile" className="profile-picture" />
+        <img src={user?.photoURL || defaulAvatar} alt="Profile" className="profile-picture" />
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
         <form onSubmit={handleUpdateProfile} className="profile-form">

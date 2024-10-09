@@ -25,6 +25,7 @@
     "uuid": "^10.0.0"
   },
   "devDependencies": {
+    "@ljharb/eslint-config": "^21.1.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.0.1",

@@ -26,7 +26,7 @@ export const createPortfolio = async (portfolioData) => {
   return response.json();
 };
 
-export const deletePortfolio = async (id, username) => { // include username
+export const deletePortfolio = async (id, username) => { 
   const response = await fetch(`${API_URL}/portfolios/${id}`, { 
     method: 'DELETE',
     headers: { 'Content-Type': 'application/json' },

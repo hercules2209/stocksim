@@ -2,14 +2,14 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface); /* Use theme-based surface color */
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--box-shadow2);
 }
 
 .dashboard h2 {
   text-align: center;
-  color: #333;
+  color: var(--text);
   margin-bottom: 20px;
 }
 
@@ -26,8 +26,8 @@
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 3px solid #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 3px solid var(--background); /* Consistent border color with theme */
+  box-shadow: var(--box-shadow);
 }
 
 .profile-form {
@@ -36,68 +36,68 @@
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: var(--spacing-medium);
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 5px;
-  color: #666;
+  margin-bottom: var(--spacing-small);
+  color: var(--text-secondary);
 }
 
 .form-group input {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  padding: var(--spacing-small);
+  border: 1px solid var(--text-secondary);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-medium);
 }
 
 .update-button, .logout-button {
   width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
+  padding: var(--spacing-medium);
+  background-color: var(--primary);
+  color: var(--surface);
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: var(--border-radius-medium);
+  font-size: var(--font-size-medium);
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color var(--transition-medium);
 }
 
 .update-button:hover, .logout-button:hover {
-  background-color: #45a049;
+  background-color: var(--secondary);
 }
 
 .logout-button {
-  background-color: #f44336;
-  margin-top: 20px;
+  background-color: var(--error);
+  margin-top: var(--spacing-large);
 }
 
 .logout-button:hover {
-  background-color: #da190b;
+  background-color: darken(var(--error), 10%);
 }
 
 .user-info {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 4px;
-  margin-top: 20px;
+  background-color: var(--surface);
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius-small);
+  margin-top: var(--spacing-large);
 }
 
 .user-info p {
   margin: 10px 0;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .error {
-  color: #f44336;
+  color: var(--error);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
 }
 
 .success {
-  color: #4CAF50;
+  color: var(--success);
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--spacing-small);
 }

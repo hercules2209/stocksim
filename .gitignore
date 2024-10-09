@@ -36,3 +36,5 @@ firebase.json
 firebase.indexes.json
 firestore.rules
 firebase-debug.log
+storage.rules
+.firebase

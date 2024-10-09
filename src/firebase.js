@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import { getFirestore } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
+import { getStorage, connectStorageEmulator } from 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBFcF7_-7aIXe3lY9JRH4fautvnSjiu8e4",
@@ -13,12 +13,14 @@ const firebaseConfig = {
   measurementId: "G-L8GXK43XL7"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize services
 const auth = getAuth(app);
 const firestore = getFirestore(app);
 const storage = getStorage(app);
+
+if (import.meta.env.DEV) {
+  connectFirestoreEmulator(firestore, 'localhost', 8080);
+  connectStorageEmulator(storage, 'localhost', 9199);
+}
 
 export { app, auth, firestore, storage };

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { MdDeleteOutline } from "react-icons/md";
 import { fetchPortfolios, deletePortfolio } from '../../redux/portfolioSlice';
+import { useUser } from 'reactfire';
 import './PortfolioOverview.css';
 
 const PortfolioOverview = () => {
@@ -13,14 +14,14 @@ const PortfolioOverview = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const portfoliosPerPage = 5;
 
-  // Read username from localStorage
-  const username = localStorage.getItem('username');
+  // Use the useUser hook to get the current user
+  const { data: user } = useUser();
 
   useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchPortfolios(username)); // Pass the username into the action
+    if (status === 'idle' && user) {
+      dispatch(fetchPortfolios(user.displayName));
     }
-  }, [status, dispatch, username]);
+  }, [status, dispatch, user]);
 
   if (status === 'loading') return <div>Loading...</div>;
   if (status === 'failed') return <div>Error: {error}</div>;
@@ -28,7 +29,7 @@ const PortfolioOverview = () => {
   const handleDelete = async (portfolioId) => {
     if (window.confirm('Are you sure you want to delete this portfolio?')) {
       try {
-        await dispatch(deletePortfolio({ id: portfolioId, username })).unwrap(); // Pass username
+        await dispatch(deletePortfolio({ id: portfolioId, username: user.displayName })).unwrap();
       } catch (error) {
         console.error('Failed to delete the portfolio:', error);
       }
@@ -55,6 +56,10 @@ const PortfolioOverview = () => {
   const currentPortfolios = sortedPortfolios.slice(indexOfFirstPortfolio, indexOfLastPortfolio);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  if (!user) {
+    return <div>Please log in to view your portfolios.</div>;
+  }
 
   return (
     <div className="portfolio-overview">

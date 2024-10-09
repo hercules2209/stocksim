@@ -1,5 +1,6 @@
+/* Sidebar Styles */
 .sidebar {
-  width: 100px;
+  width: 100px; /* Collapsed state */
   height: 100vh;
   background-color: var(--surface);
   color: var(--text);
@@ -16,7 +17,7 @@
 }
 
 .sidebar.expanded {
-  width: 200px;
+  width: 200px; /* Expanded state */
 }
 
 .sidebar-header {
@@ -53,6 +54,7 @@
   transition: background-color var(--transition-fast), color var(--transition-fast);
   border-radius: 0 25px 25px 0;
   margin: 5px 0;
+  cursor: pointer; /* Make entire nav-item clickable */
 }
 
 .nav-item:hover, .nav-item.active {
@@ -75,27 +77,69 @@
 
 .sidebar.expanded .label {
   display: inline;
+  white-space: nowrap;
 }
 
 .theme-toggle {
   display: flex;
   align-items: center;
   padding: var(--spacing-medium);
+  border-top: 1px solid var(--text-secondary);
   color: var(--text);
   text-decoration: none;
   transition: background-color var(--transition-fast), color var(--transition-fast);
   cursor: pointer;
   margin-top: auto;
-  border-top: 1px solid var(--text-secondary);
+  justify-content: flex-start;
 }
 
 .theme-toggle:hover {
-  background-color: var(--background);
-  color: var(--primary);
+  background-color: var(--primary);
+  color: var(--surface);
 }
 
-.theme-toggle .label {
+.theme-toggle .icon {
+  margin-right: var(--spacing-small);
+}
+
+/* User Section Styles */
+.user-section, .login-section {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-medium);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.user-section .icon, .login-section .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  margin-right: var(--spacing-small);
+}
+
+.profile-pic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-section .label, .login-section .label {
+  display: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-left: var(--spacing-small);
+}
+
+.sidebar.expanded .user-section .label, .sidebar.expanded .login-section .label {
+  display: inline; /* Show the label only when expanded */
 }
 
 @media (max-width: 768px) {

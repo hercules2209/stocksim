@@ -26,23 +26,16 @@ function App() {
               <div className="content">
                 <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/stock" element={<Stock />} />
-                  <Route path="/stock/:id" element={<Stock />} />
                   <Route path="/learn" element={<Learn />} />
-                  <Route path="/portfolios" element={<PortfolioOverview />} />
-                  <Route path="/portfolios/:id" element={<PortfolioDetail />} />
-                  <Route path="/create-portfolio" element={<CreatePortfolio />} />
-                  <Route path="/edit-portfolio/:id" element={<EditPortfolio />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/signup" element={<SignUp />} />
-                  <Route
-                    path="/dashboard"
-                    element={
-                      <PrivateRoute>
-                        <Dashboard />
-                      </PrivateRoute>
-                    }
-                  />
+                  <Route path="/stock" element={<PrivateRoute><Stock /></PrivateRoute>} />
+                  <Route path="/stock/:id" element={<PrivateRoute><Stock /></PrivateRoute>} />
+                  <Route path="/portfolios" element={<PrivateRoute><PortfolioOverview /></PrivateRoute>} />
+                  <Route path="/portfolios/:id" element={<PrivateRoute><PortfolioDetail /></PrivateRoute>} />
+                  <Route path="/create-portfolio" element={<PrivateRoute><CreatePortfolio /></PrivateRoute>} />
+                  <Route path="/edit-portfolio/:id" element={<PrivateRoute><EditPortfolio /></PrivateRoute>} />
+                  <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
                 </Routes>
               </div>
             </div>

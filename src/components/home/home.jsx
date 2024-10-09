@@ -9,7 +9,6 @@ const Home = () => {
   const [marketNews, setMarketNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [username, setUsername] = useState('');
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
 
@@ -34,8 +33,6 @@ const Home = () => {
         ]);
         setMarketStatus(status);
         setMarketHolidays(holidays);
-        const storedUsername = localStorage.getItem('username') || 'Guest';
-        setUsername(storedUsername);
       } catch (err) {
         setError('Failed to fetch market data');
         console.error(err);
@@ -70,7 +67,7 @@ const Home = () => {
 
   return (
     <div className="home-content">
-      <h1>Welcome {username}</h1>
+      <h1>Welcome to StockSim</h1>
       <div className="market-info-container">
         <section className="market-status">
           <h2>Market Status</h2>
